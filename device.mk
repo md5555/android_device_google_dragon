@@ -46,6 +46,9 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     $(LOCAL_PATH)/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml
 
+PRODUCT_COPY_FILES += \
+	device/google/dragon/twrp.fstab:recovery/root/etc/twrp.fstab
+
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
@@ -206,3 +209,13 @@ PRODUCT_PACKAGES += \
     rmihidtool
 
 $(call inherit-product-if-exists, vendor/nvidia/dragon/dragon-vendor.mk)
+
+DEVICE_RESOLUTION := 1800x2560
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_INCLUDE_DUMLOCK := false
+TW_NO_USB_STORAGE := true
+TWRP_EVENT_LOGGING := false
+TW_THEME := landscape_hdpi
+TW_INCLUDE_L_CRYPTO := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true

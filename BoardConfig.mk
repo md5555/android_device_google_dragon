@@ -126,3 +126,12 @@ ifeq ($(SECURE_OS_BUILD),tlk)
 endif
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.dragon
+
+DEVICE_RESOLUTION := 1800x2560
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_INCLUDE_DUMLOCK := false
+TW_NO_USB_STORAGE := true
+TWRP_EVENT_LOGGING := true
+TW_THEME := landscape_hdpi
+
