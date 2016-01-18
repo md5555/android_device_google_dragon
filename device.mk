@@ -28,6 +28,7 @@ LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.dragon
+TWRP_FSTAB := $(LOCAL_PATH)/twrp.fstab
 
 TARGET_RECOVERY_FSTAB = $(LOCAL_FSTAB)
 
@@ -41,6 +42,7 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/init_regions.sh:system/bin/init_regions.sh \
     $(LOCAL_PATH)/tune-thermal-gov.sh:system/bin/tune-thermal-gov.sh \
     $(LOCAL_FSTAB):root/fstab.dragon \
+    $(TWRP_FSTAB):root/etc/twrp.fstab \
     $(LOCAL_PATH)/ueventd.dragon.rc:root/ueventd.dragon.rc \
     $(LOCAL_PATH)/speakerdsp.ini:system/etc/cras/speakerdsp.ini \
     $(LOCAL_PATH)/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
@@ -206,3 +208,8 @@ PRODUCT_PACKAGES += \
     rmihidtool
 
 $(call inherit-product-if-exists, vendor/nvidia/dragon/dragon-vendor.mk)
+
+TW_THEME := landscape_hdpi
+TW_INCLUDE_DUMLOCK := true
+TW_NO_USB_STORAGE := true
+TW_NO_SCREEN_TIMEOUT := true
