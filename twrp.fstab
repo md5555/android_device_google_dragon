@@ -1,0 +1,6 @@
+/system		ext4 /dev/block/platform/700b0600.sdhci/by-name/APP
+/vendor 	ext4 /dev/block/platform/700b0600.sdhci/by-name/VNR
+/cache 		ext4 /dev/block/platform/700b0600.sdhci/by-name/CAC
+/data 		ext4 /dev/block/platform/700b0600.sdhci/by-name/UDA	
+/boot 		emmc /dev/block/platform/700b0600.sdhci/by-name/KERN-A
+/recovery 	emmc /dev/block/platform/700b0600.sdhci/by-name/recovery
