@@ -59,3 +59,6 @@
 
 # camera overrides ISP files
 /vendor/firmware/camera(/.*)?                   u:object_r:camera_data_file:s0
+
+# SuperSU
+/su(/.*)? u:object_r:system_file:s0
